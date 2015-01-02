@@ -1,24 +1,23 @@
 <?php
 
 // php task 4
-// Есть случайное число от 1 до 100 включительно. Если число попало в промежуток от 1 до 10, вывести фразу "Число больше 1, но меньше 10" etc.
 
 
 $number = rand(1,300);
 $start = 1;
 $end = 10;
-$counter = null;// записываем переменную с значением null, для того что бы в дальнейшем записать в переменную числовое значение
+$counter = null;// write variable with a value of null, further be able to write numeric value in the variable
 
 echo "Number equals $number<br><br>";
 
-for ($i = 1; $i <= 10; $i++) { // создаем цикл и записываем в него значения 
-	if($number >= $start and $number <= $end){ // условие при котором наше рандомное число входит в интервал от $start до $end
+for ($i = 1; $i <= 10; $i++) { 
+	if($number >= $start and $number <= $end){ // conditions under which our randomly number included in the range from $start to $end
 		echo "Number found! <br>";
-		$counter = $i; // присваиваем переменной  $counter значение $i, которое указывает на количество проведенных интераций 
-		break;// при выполнении условия цикл остановится
+		$counter = $i; // assign the variable $counter value $i, which shows number iteration
+		break;
 	} else {
 		echo "Iteration $i. Number not found. Keep looking.<br>";
-		$start += 10; // увеличиваем значение переменных, определяющих интервал, на 10
+		$start += 10; // increase the value of the variables that determine the interval 
 		$end += 10;
 	}
 }
